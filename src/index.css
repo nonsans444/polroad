@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-yellow: #FBBF24;
+  --color-brand-dark: #0F0F0F;
+  --color-brand-nav: #141414;
+  --color-brand-surface: #121212;
+  --color-brand-footer: #0A0A0A;
+  --color-brand-text: #F0F0F0;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-brand-text font-sans antialiased;
+  }
+  
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+.skew-line {
+  @apply absolute right-40 top-0 h-full w-[100px] border-x border-white/10 -skew-x-[25deg];
+}
+
+.road-gradient {
+  @apply absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-brand-yellow/10 to-transparent;
+}
+
+.geometric-line {
+  @apply absolute left-0 w-full bg-white/10;
+}
+
