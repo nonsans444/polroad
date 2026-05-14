@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { translations, type Language } from './translations';
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('EN');
+  const [lang, setLang] = useState<Language>('PL');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,8 +33,8 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleLang = () => {
-    setLang(prev => prev === 'EN' ? 'PL' : 'EN');
+  const handleLangChange = (newLang: Language) => {
+    setLang(newLang);
   };
 
   return (
@@ -42,11 +42,19 @@ export default function App() {
       {/* Navigation */}
       <nav className="h-16 border-b border-white/10 flex items-center bg-brand-nav fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-brand-yellow flex items-center justify-center font-black text-black text-xl italic leading-none">PR</div>
-            <span className="text-xl font-bold tracking-tighter uppercase whitespace-nowrap">
-              PolRoad <span className="font-light text-white/50 hidden sm:inline">Construction</span>
-            </span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-brand-yellow flex items-center justify-center font-black text-black text-xl italic leading-none">PR</div>
+              <span className="text-xl font-bold tracking-tighter uppercase whitespace-nowrap text-white">
+                Pol<span className="text-brand-yellow">Road</span>
+              </span>
+            </div>
+            <div className="h-6 w-[1px] bg-white/10 hidden lg:block"></div>
+            <div className="px-3 py-1 bg-white/5 border border-brand-yellow/40 skew-x-[-12deg] hidden md:block">
+              <span className="text-[10px] sm:text-xs font-black uppercase italic tracking-widest text-brand-yellow block skew-x-[12deg]">
+                Tak! Damy radę
+              </span>
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-semibold">
@@ -55,13 +63,21 @@ export default function App() {
             <a href="#careers" className="hover:text-brand-yellow">{t.nav.careers}</a>
             <a href="#contact" className="hover:text-brand-yellow">{t.nav.contact}</a>
             <div className="h-4 w-[1px] bg-white/20"></div>
-            <button 
-              onClick={toggleLang}
-              className="flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 hover:border-brand-yellow hover:bg-brand-yellow hover:text-black transition-all group"
-            >
-              <Globe size={14} />
-              <span className="font-bold">{t.nav.lang}</span>
-            </button>
+            <div className="relative group">
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 text-white/80 group-hover:border-brand-yellow transition-all">
+                <Globe size={14} className="text-brand-yellow" />
+                <select 
+                  value={lang}
+                  onChange={(e) => handleLangChange(e.target.value as Language)}
+                  className="bg-transparent border-none outline-none cursor-pointer font-bold focus:ring-0 appearance-none pr-4"
+                >
+                  <option value="PL" className="bg-brand-nav text-white">POLSKI</option>
+                  <option value="EN" className="bg-brand-nav text-white">ENGLISH</option>
+                  <option value="DE" className="bg-brand-nav text-white">DEUTSCH</option>
+                </select>
+                <div className="absolute right-3 pointer-events-none opacity-50">▼</div>
+              </div>
+            </div>
           </div>
 
           <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(true)}>
@@ -70,18 +86,18 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Floating Language Switcher */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={toggleLang}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-brand-yellow text-black rounded-full shadow-2xl flex flex-col items-center justify-center border-4 border-brand-dark md:hidden"
-      >
-        <Globe size={20} />
-        <span className="text-[10px] font-black">{lang === 'EN' ? 'PL' : 'EN'}</span>
-      </motion.button>
+      {/* Floating Language Switcher for Mobile only */}
+      <div className="fixed bottom-6 right-6 z-40 md:hidden flex flex-col items-center">
+        <select 
+          value={lang}
+          onChange={(e) => handleLangChange(e.target.value as Language)}
+          className="w-14 h-14 bg-brand-yellow text-black rounded-full shadow-2xl border-4 border-brand-dark appearance-none text-center font-black text-xs cursor-pointer outline-none"
+        >
+          <option value="PL">PL</option>
+          <option value="EN">EN</option>
+          <option value="DE">DE</option>
+        </select>
+      </div>
 
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -99,9 +115,21 @@ export default function App() {
               <a href="#projects" onClick={() => setMobileMenuOpen(false)}>{t.nav.projects}</a>
               <a href="#careers" onClick={() => setMobileMenuOpen(false)}>{t.nav.careers}</a>
               <a href="#contact" onClick={() => setMobileMenuOpen(false)}>{t.nav.contact}</a>
-              <button onClick={() => { toggleLang(); setMobileMenuOpen(false); }} className="text-brand-yellow text-left">
-                {t.nav.lang} ({lang === 'EN' ? 'PL' : 'EN'})
-              </button>
+              
+              <div className="mt-4 p-4 border border-white/10 bg-white/5">
+                <p className="text-xs opacity-50 mb-3">{t.nav.lang}</p>
+                <div className="flex flex-wrap gap-4">
+                  {(['PL', 'EN', 'DE'] as Language[]).map((l) => (
+                    <button 
+                      key={l}
+                      onClick={() => { handleLangChange(l); setMobileMenuOpen(false); }}
+                      className={`px-4 py-2 border ${lang === l ? 'bg-brand-yellow text-black border-brand-yellow' : 'border-white/20 text-white'}`}
+                    >
+                      {l}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
@@ -129,14 +157,14 @@ export default function App() {
               transition={{ duration: 0.8 }}
               className="max-w-3xl"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-brand-yellow text-[10px] uppercase tracking-[0.2em] font-bold mb-8">
-                <span className="w-2 h-2 bg-brand-yellow rounded-full animate-pulse"></span>
-                Poland's Infrastructure Leader
-              </div>
-              <h1 className="text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-8 text-white">
-                {t.hero.title.split('.')[0]}<br/>
-                <span className="text-brand-yellow italic">Backbone.</span>
-              </h1>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-brand-yellow text-[10px] uppercase tracking-[0.2em] font-bold mb-8">
+              <span className="w-2 h-2 bg-brand-yellow rounded-full animate-pulse"></span>
+              {t.footer.location} - Infrastructure Leader
+            </div>
+            <h1 className="text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase mb-8 text-white">
+              PolRoad: <br/>
+              <span className="text-brand-yellow italic text-4xl md:text-7xl">Tak! Damy radę.</span>
+            </h1>
               <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light mb-10 max-w-xl italic">
                 {t.hero.subtext}
               </p>
@@ -212,14 +240,18 @@ export default function App() {
             <div className="geometric-line top-1/2 -mt-[1px] h-[2px]"></div>
           </div>
           <div className="relative z-10 text-center">
-            <span className="text-brand-yellow font-black text-xs uppercase tracking-[0.5em] italic">Poland Connected</span>
+            <span className="text-brand-yellow font-black text-xs uppercase tracking-[0.5em] italic">{t.footer.location} & Connect</span>
           </div>
         </section>
       </div>
 
       {/* Footer */}
       <footer className="h-20 sm:h-14 border-t border-white/10 px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between bg-brand-footer text-[10px] uppercase tracking-[0.2em] font-medium text-white/40 gap-4 py-4 sm:py-0">
-        <div>{t.footer.rights}</div>
+        <div className="flex items-center gap-4">
+          <span>{t.footer.rights}</span>
+          <span className="hidden md:inline opacity-50">|</span>
+          <span className="text-white/60">{t.footer.location}</span>
+        </div>
         <div className="flex flex-wrap justify-center gap-6">
           <a href="#" className="hover:text-white">Privacy Policy</a>
           <a href="#" className="hover:text-white">Terms of Service</a>

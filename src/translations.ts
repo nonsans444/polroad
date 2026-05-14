@@ -1,4 +1,4 @@
-export type Language = 'EN' | 'PL';
+export type Language = 'EN' | 'PL' | 'DE';
 
 export const translations = {
   EN: {
@@ -7,8 +7,7 @@ export const translations = {
       projects: 'Projects',
       careers: 'Careers',
       contact: 'Contact Us',
-      lang: 'POLSKI',
-      langCode: 'PL'
+      lang: 'Language'
     },
     hero: {
       title: "Building Poland's Backbone.",
@@ -27,7 +26,7 @@ export const translations = {
         },
         {
           title: 'Road Crew Specialist',
-          location: 'Local Villages / Regional',
+          location: 'Gdańsk / Regional',
           description: 'Building and maintaining local paths and village road networks.'
         }
       ]
@@ -51,7 +50,8 @@ export const translations = {
       ]
     },
     footer: {
-      rights: '© 2026 PolRoad Construction. All Rights Reserved.'
+      rights: '© 2026 Tak! Damy radę. All Rights Reserved.',
+      location: 'Gdańsk, Poland'
     }
   },
   PL: {
@@ -60,8 +60,7 @@ export const translations = {
       projects: 'Projekty',
       careers: 'Kariera',
       contact: 'Kontakt',
-      lang: 'ENGLISH',
-      langCode: 'EN'
+      lang: 'Język'
     },
     hero: {
       title: 'Budujemy Kręgosłup Polski.',
@@ -71,7 +70,7 @@ export const translations = {
     },
     careers: {
       title: 'Dołącz do Naszego Zespołu',
-      description: 'Poszukujemy oddanych profesjonalistów, którzy pomogą nam rozwijać polską infrastrukturę. Niezależnie od tego, czy jesteś doświadczonym operatorem, czy pracownikiem fizycznym, Twoje miejsce jest tutaj.',
+      description: 'Poszukujemy oddanych profesjonalistów, którzy pomogą nam rozwinć polską infrastrukturę. Niezależnie od tego, czy jesteś doświadczonym operatorem, czy pracownikiem fizycznym, Twoje miejsce jest tutaj.',
       roles: [
         {
           title: 'Operator Maszyn Ciężkich',
@@ -80,7 +79,7 @@ export const translations = {
         },
         {
           title: 'Specjalista Ekipy Drogowej',
-          location: 'Lokalne Wioski / Regionalne',
+          location: 'Gdańsk / Regionalne',
           description: 'Budowa i utrzymanie lokalnych ścieżek oraz wiejskich sieci drogowych.'
         }
       ]
@@ -104,7 +103,61 @@ export const translations = {
       ]
     },
     footer: {
-      rights: '© 2026 PolRoad Budownictwo. Wszelkie prawa zastrzeżone.'
+      rights: '© 2026 Tak! Damy radę. Wszelkie prawa zastrzeżone.',
+      location: 'Gdańsk, Polska'
+    }
+  },
+  DE: {
+    nav: {
+      about: 'Über uns',
+      projects: 'Projekte',
+      careers: 'Karriere',
+      contact: 'Kontakt',
+      lang: 'Sprache'
+    },
+    hero: {
+      title: 'Polens Rückgrat bauen.',
+      subtext: 'Von riesigen Autobahnkreuzen bis zu wichtigen Dorfstraßennetzen ebnen wir den Weg für eine vernetzte Nation. Werden Sie Teil des Teams, das das Land bewegt.',
+      btn1: 'Stellenangebote ansehen',
+      btn2: 'Unsere Arbeit'
+    },
+    careers: {
+      title: 'Werden Sie Teil unseres Teams',
+      description: 'Wir suchen engagierte Profis, die uns beim Ausbau der polnischen Infrastruktur helfen. Ob Experte für Maschinenbedienung oder Fachkraft für den Straßenbau – Ihr Platz ist hier.',
+      roles: [
+        {
+          title: 'Baumaschinenführer',
+          location: 'Landesweit / Autobahnen',
+          description: 'Bedienung von Baggern und Fertigern bei großen Autobahnprojekten.'
+        },
+        {
+          title: 'Straßenbau-Spezialist',
+          location: 'Danzig / Regional',
+          description: 'Bau und Instandhaltung von lokalen Wegen und Dorfstraßennetzen.'
+        }
+      ]
+    },
+    why: {
+      title: 'Warum wir?',
+      subtitle: 'Zuverlässigkeit & Sicherheit',
+      features: [
+        {
+          title: 'Moderne Ausrüstung',
+          description: 'Wir nutzen die neueste Technologie im Straßenbau.'
+        },
+        {
+          title: 'Stabilität',
+          description: 'Langfristige Verträge und wettbewerbsfähige polnische Gehälter.'
+        },
+        {
+          title: 'Auswirkung',
+          description: 'Wir verbessern das Leben von Stadtbewohnern und Dorfbewohnern gleichermaßen.'
+        }
+      ]
+    },
+    footer: {
+      rights: '© 2026 Tak! Damy radę. Alle Rechte vorbehalten.',
+      location: 'Danzig, Polen'
     }
   }
 };
