@@ -5,47 +5,54 @@ export const translations = {
     nav: {
       about: 'About Us',
       projects: 'Projects',
-      careers: 'Careers',
+      careers: 'Infrastructure',
       contact: 'Contact Us',
-      lang: 'Language'
+      lang: 'Change Language',
+      home: 'Home'
     },
     hero: {
       title: "Building Poland's Backbone.",
-      subtext: "From massive highway interchanges to essential village road networks, we pave the way for a connected nation. Join the team that moves the country.",
-      btn1: 'View Openings',
+      subtext: "From massive highway interchanges to essential village road networks, we pave the way for a connected nation. Dedicated to excellence in Polish infrastructure.",
+      btn1: 'About Road Tech',
       btn2: 'Our Work'
     },
+    announcement: {
+      tag: 'New Opportunity',
+      title: 'Hiring: Painter Helper',
+      description: 'We are currently looking for a hard-working Painter Helper to join our team in Gdańsk. No prior experience required, just reliability.',
+      btn: 'Contact for details'
+    },
     careers: {
-      title: 'Join Our Workforce',
-      description: "We are looking for dedicated professionals to help us expand Poland's infrastructure. Whether you are an expert operator or a manual specialist, your place is here.",
+      title: 'Our Road Construction Expertise',
+      description: "While we are not currently hiring for major roles, we continue to lead Poland's infrastructure development through specialized expertise in various road construction domains.",
       roles: [
         {
-          title: 'Heavy Machinery Operator',
-          location: 'Nationwide / Highways',
-          description: 'Operating excavators and pavers on major motorway projects.'
+          title: 'Heavy Machinery Tech',
+          location: 'Highway Engineering',
+          description: 'Advanced asphalt paving technology and high-performance machinery usage for national motorways.'
         },
         {
-          title: 'Road Crew Specialist',
-          location: 'Gdańsk / Regional',
-          description: 'Building and maintaining local paths and village road networks.'
+          title: 'Regional Path Design',
+          location: 'Local Communities',
+          description: 'Developing sustainable road solutions for villages and regional paths to boost local connectivity.'
         }
       ]
     },
     why: {
       title: 'Why Choose Us?',
-      subtitle: 'Reliability & Safety',
+      subtitle: 'Reliability, Safety & Patriotism',
       features: [
         {
           title: 'Modern Equipment',
-          description: 'We use the latest technology in road construction.'
+          description: 'We utilize the latest European technology in road construction for maximum durability.'
         },
         {
           title: 'Stability',
-          description: 'Long-term contracts and competitive Polish salaries.'
+          description: 'A proven track record of long-term contracts and contributing to the Polish economy.'
         },
         {
-          title: 'Impact',
-          description: 'We improve the lives of city residents and villagers alike.'
+          title: 'National Impact',
+          description: 'Improving lives and connectivity for all Polish citizens, from cities to the smallest villages.'
         }
       ]
     },
@@ -58,47 +65,54 @@ export const translations = {
     nav: {
       about: 'O nas',
       projects: 'Projekty',
-      careers: 'Kariera',
+      careers: 'Infrastruktura',
       contact: 'Kontakt',
-      lang: 'Język'
+      lang: 'Zmień Język',
+      home: 'Start'
     },
     hero: {
       title: 'Budujemy Kręgosłup Polski.',
-      subtext: 'Od potężnych węzłów autostradowych po kluczowe sieci dróg wiejskich, przecieramy szlaki dla połączonego narodu. Dołącz do zespołu, który napędza kraj.',
-      btn1: 'Zobacz Oferty',
+      subtext: 'Od potężnych węzłów autostradowych po kluczowe sieci dróg wiejskich, przecieramy szlaki dla połączonego narodu. Oddani doskonałości w polskiej infrastrukturze.',
+      btn1: 'O Technologii',
       btn2: 'Nasze Realizacje'
     },
+    announcement: {
+      tag: 'Nowa Ogłoszenie',
+      title: 'Zatrudnimy: Pomocnik Malarza',
+      description: 'Obecnie poszukujemy pracowitego Pomocnika Malarza do naszego zespołu w Gdańsku. Doświadczenie nie jest wymagane, liczy się rzetelność.',
+      btn: 'Kontakt po szczegóły'
+    },
     careers: {
-      title: 'Dołącz do Naszego Zespołu',
-      description: 'Poszukujemy oddanych profesjonalistów, którzy pomogą nam rozwinć polską infrastrukturę. Niezależnie od tego, czy jesteś doświadczonym operatorem, czy pracownikiem fizycznym, Twoje miejsce jest tutaj.',
+      title: 'Nasza Wiedza Ekspercka',
+      description: 'Obecnie nie prowadzimy rekrutacji na główne stanowiska, ale niezmiennie przewodzimy rozwojowi polskiej infrastruktury dzięki specjalistycznej wiedzy.',
       roles: [
         {
-          title: 'Operator Maszyn Ciężkich',
-          location: 'Cała Polska / Autostrady',
-          description: 'Obsługa koparek i rozściełaczy przy dużych projektach autostradowych.'
+          title: 'Technologia Maszyn',
+          location: 'Inżynieria Autostrad',
+          description: 'Zaawansowana technologia układania asfaltu i wykorzystanie wysokowydajnych maszyn na autostradach krajowych.'
         },
         {
-          title: 'Specjalista Ekipy Drogowej',
-          location: 'Gdańsk / Regionalne',
-          description: 'Budowa i utrzymanie lokalnych ścieżek oraz wiejskich sieci drogowych.'
+          title: 'Drogi Regionalne',
+          location: 'Lokalne Społeczności',
+          description: 'Tworzenie trwałych rozwiązań drogowych dla wsi i ścieżek regionalnych w celu zwiększenia łączności lokalnej.'
         }
       ]
     },
     why: {
       title: 'Dlaczego My?',
-      subtitle: 'Niezawodność i Bezpieczeństwo',
+      subtitle: 'Niezawodność, Bezpieczeństwo i Patriotyzm',
       features: [
         {
           title: 'Nowoczesny Sprzęt',
-          description: 'Korzystamy z najnowszych technologii w budownictwie drogowym.'
+          description: 'Wykorzystujemy najnowsze europejskie technologie w budownictwie drogowym dla maksymalnej trwałości.'
         },
         {
           title: 'Stabilność',
-          description: 'Długoterminowe kontrakty i konkurencyjne polskie wynagrodzenia.'
+          description: 'Udokumentowana historia długoterminowych kontraktów i wkład w polską gospodarkę.'
         },
         {
-          title: 'Wpływ',
-          description: 'Poprawiamy jakość życia zarówno mieszkańców miast, jak i wsi.'
+          title: 'Wpływ Narodowy',
+          description: 'Poprawa jakości życia i łączności dla wszystkich obywateli Polski, od miast po najmniejsze wsie.'
         }
       ]
     },
@@ -111,47 +125,54 @@ export const translations = {
     nav: {
       about: 'Über uns',
       projects: 'Projekte',
-      careers: 'Karriere',
+      careers: 'Infrastruktur',
       contact: 'Kontakt',
-      lang: 'Sprache'
+      lang: 'Sprache ändern',
+      home: 'Start'
     },
     hero: {
       title: 'Polens Rückgrat bauen.',
-      subtext: 'Von riesigen Autobahnkreuzen bis zu wichtigen Dorfstraßennetzen ebnen wir den Weg für eine vernetzte Nation. Werden Sie Teil des Teams, das das Land bewegt.',
-      btn1: 'Stellenangebote ansehen',
+      subtext: 'Von riesigen Autobahnkreuzen bis zu wichtigen Dorfstraßennetzen ebnen wir den Weg für eine vernetzte Nation. Höchste Qualität in der polnischen Infrastruktur.',
+      btn1: 'Über Straßentechnik',
       btn2: 'Unsere Arbeit'
     },
+    announcement: {
+      tag: 'Neues Angebot',
+      title: 'Gesucht: Malhelfer',
+      description: 'Wir suchen derzeit einen fleißigen Malhelfer zur Verstärkung unseres Teams in Danzig. Keine Vorerfahrung erforderlich, nur Zuverlässigkeit.',
+      btn: 'Kontakt für Details'
+    },
     careers: {
-      title: 'Werden Sie Teil unseres Teams',
-      description: 'Wir suchen engagierte Profis, die uns beim Ausbau der polnischen Infrastruktur helfen. Ob Experte für Maschinenbedienung oder Fachkraft für den Straßenbau – Ihr Platz ist hier.',
+      title: 'Unsere Expertise im Straßenbau',
+      description: 'Obwohl wir derzeit keine Stellen für Führungspositionen ausschreiben, führen wir die Entwicklung der polnischen Infrastruktur durch spezielles Know-how weiter an.',
       roles: [
         {
-          title: 'Baumaschinenführer',
-          location: 'Landesweit / Autobahnen',
-          description: 'Bedienung von Baggern und Fertigern bei großen Autobahnprojekten.'
+          title: 'Maschinentechnik',
+          location: 'Autobahnbau',
+          description: 'Fortschrittliche Asphaltiertechnik und Einsatz von Hochleistungsmaschinen für nationale Autobahnen.'
         },
         {
-          title: 'Straßenbau-Spezialist',
-          location: 'Danzig / Regional',
-          description: 'Bau und Instandhaltung von lokalen Wegen und Dorfstraßennetzen.'
+          title: 'Regionale Wegeplanung',
+          location: 'Lokale Gemeinschaften',
+          description: 'Entwicklung nachhaltiger Straßenlösungen für Dörfer und regionale Wege zur Stärkung der lokalen Vernetzung.'
         }
       ]
     },
     why: {
       title: 'Warum wir?',
-      subtitle: 'Zuverlässigkeit & Sicherheit',
+      subtitle: 'Zuverlässigkeit, Sicherheit & Patriotismus',
       features: [
         {
           title: 'Moderne Ausrüstung',
-          description: 'Wir nutzen die neueste Technologie im Straßenbau.'
+          description: 'Wir nutzen modernste europäische Technologie im Straßenbau für maximale Langlebigkeit.'
         },
         {
           title: 'Stabilität',
-          description: 'Langfristige Verträge und wettbewerbsfähige polnische Gehälter.'
+          description: 'Eine nachgewiesene Erfolgsbilanz bei langfristigen Verträgen und ein Beitrag zur polnischen Wirtschaft.'
         },
         {
-          title: 'Auswirkung',
-          description: 'Wir verbessern das Leben von Stadtbewohnern und Dorfbewohnern gleichermaßen.'
+          title: 'Nationaler Einfluss',
+          description: 'Verbesserung des Lebens und der Konnektivität für alle polnischen Bürger, von Städten bis hin zu den kleinsten Dörfern.'
         }
       ]
     },
